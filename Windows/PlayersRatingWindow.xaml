@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp3.Windows.PlayersRatingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3.Windows"
+        mc:Ignorable="d"
+        Title="Игроки" Height="500" MaxHeight="500" MinHeight="500" Width="360" MaxWidth="360" MinWidth="360" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid>
+        <DataGrid x:Name="playersDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Login" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Всего игр" Binding="{Binding PlayedGames}"/>
+                <DataGridTextColumn Header="Побед" Binding="{Binding Wins}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
